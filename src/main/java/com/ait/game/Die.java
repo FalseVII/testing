@@ -1,10 +1,12 @@
 package com.ait.game;
+
+import java.util.Random;
+
 public class Die
 {
     private int value;
+    private Random r = new Random();
 
-    private static int max=6;
-    private static int min=1;
 
     public Die()
     {
@@ -15,7 +17,11 @@ public class Die
     // roll the die
     public void roll()
     {
-        value = (int) (Math.random()  * (max - min + 1) + min);  // number from 0 to sides
+        value = r.nextInt(0,7) ; // number from 0 to sides
+        if (value == 0)
+        {
+            value = 1;  // make sure value is not 0
+        }
     }
 
     public int getValue()

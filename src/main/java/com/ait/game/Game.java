@@ -10,7 +10,7 @@ public class Game {
 	static final int SCORE_TO_WIN = 20;
 
 	public void start() {
-		numDiceRolls = 1;
+		numDiceRolls = 0;
 		// display a welcome message
 		System.out.println("Welcome to the Dice Roller application");
 		System.out.println();
@@ -57,6 +57,7 @@ public class Game {
 			}
 		}
 		System.out.println("Good bye!");
+		System.exit(1);
 	}
 
 }
