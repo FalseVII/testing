@@ -1,1 +1,0 @@
-<h1>    Testing example repository </h1>
