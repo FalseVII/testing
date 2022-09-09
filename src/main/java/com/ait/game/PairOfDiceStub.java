@@ -4,30 +4,49 @@ public class PairOfDiceStub {
 	int counter=0;
 	int value1;
 	int value2;
+	private Die die1;
+	private Die die2;
+
 	
 	public PairOfDiceStub() {
-		
+		die1 = new Die();
+		die2 = new Die();
 	}
 	
-	public void roll()
+	public void roll(int identifier)
 	{
-		if (counter==0) {
-			value1=2;//player1
-			value2=2;
+		switch (identifier) {
+			case 1:
+				if (counter==0) {
+					die1.setValue(2);
+					die2.setValue(2);
+				}
+				else if(counter==1) {
+					die1.setValue(2);
+					die2.setValue(3);
+				}
+				else if(counter==2) {
+					die1.setValue(2);
+					die2.setValue(4);
+				}
+				else if(counter==3) {
+					die1.setValue(2);
+					die2.setValue(6);
+				}
+				counter++;
+				break;
+			case 2:
+				counter =0;
+				break;
+			case 3:
+				counter =0;
+				break;
+			case 4:
+				break;
+			default:
+				break;
 		}
-		else if(counter==1) {//player2
-			value1=6;//player1
-			value2=6;
-		}
-		else if(counter==2) {
-			value1=2;
-			value2=2;
-		}
-		else if(counter==3) {
-			value1=4;
-			value2=4;
-		}
-		counter++;
+
 		
 	}
 

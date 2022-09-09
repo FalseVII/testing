@@ -17,11 +17,15 @@ public class Die
     // roll the die
     public void roll()
     {
-        value = r.nextInt(0,7) ; // number from 0 to sides
+        value = r.nextInt(0,7) ; // number from 0 to 6
         if (value == 0)
         {
             value = 1;  // make sure value is not 0
         }
+    }
+
+    public void setValue(int value) {
+        this.value = value;
     }
 
     public int getValue()

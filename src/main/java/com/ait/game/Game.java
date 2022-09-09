@@ -3,14 +3,13 @@ package com.ait.game;
 import java.util.Scanner;
 
 public class Game {
-	private Scanner sc;
-	private Player player1;
-	private Player player2;
-	private int numDiceRolls;
 	static final int SCORE_TO_WIN = 20;
 
 	public void start() {
-		numDiceRolls = 0;
+		Scanner sc;
+		Player player1;
+		Player player2;
+		int numDiceRolls = 0;
 		// display a welcome message
 		System.out.println("Welcome to the Dice Roller application");
 		System.out.println();
