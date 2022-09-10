@@ -49,22 +49,18 @@ public class PairOfDiceStub {
 
 		
 	}
-
-	// get value of die1
 	public int getValue1()
 	{
-		return value1;
+		return die1.getValue();
 	}
-
-	// get value of die2
 	public int getValue2()
 	{
-		return value2;
+		return die2.getValue();
 	}
 
 	public int getSum()
 	{
-		return value1+value2;
+		return die2.getValue()+ die2.getValue();
 	}
 
 }
