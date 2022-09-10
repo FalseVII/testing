@@ -35,7 +35,7 @@ Purpose of integration testing is to expose
 defects in the interfaces and in the
 interactions between components
 An integration strategy is required:
-    - Top down
+    - Bottom up
     Sometimes necessary to replace
     components with a stub ( a passive skeletal
     implementation of a component)
