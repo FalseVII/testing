@@ -17,9 +17,8 @@ Repeats Dice 1 twice for player one.
 
 Application does not exit on completion.(?)
 
-        Test Levels:
 
-    Unit Tests:
+<h1>Unit Tests:</h1>
 
 Unit testing is intended to ensure that the
 code written works as intended before it is
