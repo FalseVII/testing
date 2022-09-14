@@ -18,7 +18,7 @@ Repeats Dice 1 twice for player one.
 Application does not exit on completion.(?)
 
 
-<h1>Unit Tests:</h1>
+<h3>Unit Tests:</h3>
 
 Unit testing is intended to ensure that the
 code written works as intended before it is
@@ -31,7 +31,7 @@ Can use test driven approach
 Usually performed by the developer
 
 
-    Integration Tests:
+<h3>Integration tests:</h3>
 
 Integration is building something from
 smaller units of software
@@ -44,7 +44,7 @@ An integration strategy is required:
     components with a stub ( a passive skeletal
     implementation of a component)
 
-    Manual Tests:
+<h3>Manual Tests:</h3>
 
 Manual testing is the process of manually executing a
 test case to verify that the software works as expected.
