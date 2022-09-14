@@ -18,30 +18,45 @@ public class PairOfDiceStub {
 		switch (identifier) {
 			case 1:
 				if (counter==0) {
-					die1.setValue(2);
-					die2.setValue(2);
+					die1.setValue(6);
+					die2.setValue(6);
 				}
 				else if(counter==1) {
-					die1.setValue(2);
-					die2.setValue(3);
+					die1.setValue(1);
+					die2.setValue(1);
 				}
 				else if(counter==2) {
-					die1.setValue(2);
-					die2.setValue(4);
+					die1.setValue(6);
+					die2.setValue(5);
 				}
 				else if(counter==3) {
-					die1.setValue(2);
-					die2.setValue(6);
+					die1.setValue(1);
+					die2.setValue(2);
 				}
 				counter++;
 				break;
 			case 2:
-				counter =0;
+				if (counter==0) {
+					die1.setValue(1);
+					die2.setValue(1);
+				}
+				else if(counter==1) {
+					die1.setValue(6);
+					die2.setValue(6);
+				}
+				else if(counter==2) {
+					die1.setValue(1);
+					die2.setValue(2);
+				}
+				else if(counter==3) {
+					die1.setValue(6);
+					die2.setValue(5);
+				}
+				counter++;
 				break;
 			case 3:
-				counter =0;
-				break;
-			case 4:
+					die1.setValue(5);
+					die2.setValue(5);
 				break;
 			default:
 				break;
