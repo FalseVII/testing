@@ -13,9 +13,9 @@ Does not check player one hitting an exact 20 for draw, counts it as a draw if o
 Does not roll dice for player two, reuses values from roll one.\
 Rounds start at two.\
 Die rolls can hit a 0; should be 1-6.\
-Repeats Dice 1 twice for player one.\
+Repeats Dice 1 twice for player one.
 
-Application does not exit on completion.(?)\
+Application does not exit on completion.(?)
 
 
 <h3>Unit Tests:</h3>
@@ -28,7 +28,7 @@ executed\
 Usually supported by a test framework\
 (jUnit in this case)\
 Can use test driven approach\
-Usually performed by the developer\
+Usually performed by the developer
 
 
 <h3>Integration tests:</h3>
@@ -42,12 +42,12 @@ An integration strategy is required:\
     - Bottom up\
     Sometimes necessary to replace\
     components with a stub ( a passive skeletal\
-    implementation of a component)\
+    implementation of a component)
 
 <h3>Manual Tests:</h3>
 
 Manual testing is the process of manually executing a\
 test case to verify that the software works as expected.\
-Manual testing is the most basic form of testing.\
+Manual testing is the most basic form of testing.
 
 
