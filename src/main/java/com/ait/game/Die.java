@@ -17,7 +17,7 @@ public class Die
     // roll the die
     public void roll()
     {
-        value = r.nextInt(0,7) ; // number from 0 to 6
+        value = r.nextInt(7) ; // number from 0 to 6
         if (value == 0)
         {
             value = 1;  // make sure value is not 0

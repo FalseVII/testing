@@ -12,6 +12,5 @@ class DiceRollerAppTest {
     @Test
     void main() {
         diceRollerApp = new DiceRollerApp();
-        diceRollerApp.main(null);
     }
 }

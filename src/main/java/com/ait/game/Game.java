@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Game {
 	static final int SCORE_TO_WIN = 20;
+	int identity = 1;
 
 	public void start() {
 		Scanner sc;
@@ -16,26 +17,26 @@ public class Game {
 		sc = new Scanner(System.in);
 		String player1Name;
 		String player2Name;
-		System.out.println("Please enter player one name: ");
-		player1Name = sc.next();
-		System.out.println("Please enter player two name: ");
-		player2Name = sc.next();
+		System.out.println("Please enter player one name: (Stub assumes Tom)");
+		player1Name = "Tom"; //sc.next();
+		System.out.println("Please enter player two name: (Stub assumes Jerry)");
+		player2Name ="Jerry"; //sc.next();
 		player1 = new Player(player1Name);
 		player2 = new Player(player2Name);
-		PairOfDice dice = new PairOfDice();
-		System.out.println("Roll the dice? (y/n): ");
-		String choice = sc.next().toLowerCase();
+		PairOfDiceStub dice = new PairOfDiceStub();
+		System.out.println("Roll the dice? (y/n): (Stub assumes y)");
+		String choice = "y"; //sc.next().toLowerCase();
 		while (choice.equals("y")) {
 			numDiceRolls++;
 			System.out.println("");
 			System.out.println("Round " + numDiceRolls + ": ");
 			System.out.println("Rolling dice for player one ");
-			dice.roll();
+			dice.roll(identity);
 			System.out.println("Die 1 is " + dice.getValue1());
 			System.out.println("Die 2 is " + dice.getValue2());
 			player1.setTotalScore(dice.getSum());
 			System.out.println("Rolling dice for player two ");
-			dice.roll();
+			dice.roll(identity);
 			System.out.println("Die 1 is " + dice.getValue1());
 			System.out.println("Die 2 is " + dice.getValue2());
 			player2.setTotalScore(dice.getSum());
@@ -51,8 +52,8 @@ public class Game {
 			} else {
 				System.out.println("No winner yet");
 
-				System.out.println("Roll the dice again? (y/n): ");
-				choice = sc.next().toLowerCase();
+				System.out.println("Roll the dice again? (y/n): (Stub assumes y)");
+				choice = "y"; //sc.next().toLowerCase();
 			}
 		}
 		System.out.println("Good bye!");
