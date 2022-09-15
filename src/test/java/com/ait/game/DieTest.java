@@ -23,7 +23,6 @@ class DieTest {
     }
     /*
     A cleaner implementation but does not follow the brief.
-        https://www.youtube.com/watch?v=k6KG-k3z05Q this is an absolute banger tho.
 
     @RepeatedTest(100)
     void roll2(){
