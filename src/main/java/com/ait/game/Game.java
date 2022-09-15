@@ -57,7 +57,6 @@ public class Game {
 			}
 		}
 		System.out.println("Good bye!");
-		System.exit(1);
 	}
 
 }

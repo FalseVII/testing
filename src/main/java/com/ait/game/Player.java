@@ -25,7 +25,4 @@ public class Player {
 	public String toString() {
 		return ("Current score for "+name +" is "+totalScore);
 	}
-	
-	
-
 }

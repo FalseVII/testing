@@ -14,23 +14,17 @@ class DiceRollerAppTest {
         diceRollerApp = new DiceRollerApp();
         PairOfDiceStub.identity = 1;
         diceRollerApp.main(null);
-        diceRollerApp = null;
-        System.gc();
     }
     @Test
     void mainPlayerTwo() {
         diceRollerApp = new DiceRollerApp();
         PairOfDiceStub.identity = 2;
         diceRollerApp.main(null);
-        diceRollerApp = null;
-        System.gc();
     }
     @Test
     void mainPlayerDraw() {
         diceRollerApp = new DiceRollerApp();
         PairOfDiceStub.identity = 3;
         diceRollerApp.main(null);
-        diceRollerApp = null;
-        System.gc();
     }
 }
