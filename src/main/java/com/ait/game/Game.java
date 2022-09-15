@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Game {
 	static final int SCORE_TO_WIN = 20;
-	int identity = 1;
+
 
 	public void start() {
 		Scanner sc;
@@ -31,12 +31,12 @@ public class Game {
 			System.out.println("");
 			System.out.println("Round " + numDiceRolls + ": ");
 			System.out.println("Rolling dice for player one ");
-			dice.roll(identity);
+			dice.roll();
 			System.out.println("Die 1 is " + dice.getValue1());
 			System.out.println("Die 2 is " + dice.getValue2());
 			player1.setTotalScore(dice.getSum());
 			System.out.println("Rolling dice for player two ");
-			dice.roll(identity);
+			dice.roll();
 			System.out.println("Die 1 is " + dice.getValue1());
 			System.out.println("Die 2 is " + dice.getValue2());
 			player2.setTotalScore(dice.getSum());

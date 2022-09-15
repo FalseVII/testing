@@ -6,6 +6,7 @@ public class PairOfDiceStub {
 	int value2;
 	private Die die1;
 	private Die die2;
+	public static int identity = 1;
 
 	
 	public PairOfDiceStub() {
@@ -13,9 +14,9 @@ public class PairOfDiceStub {
 		die2 = new Die();
 	}
 	
-	public void roll(int identifier)
+	public void roll()
 	{
-		switch (identifier) {
+		switch (identity) {
 			case 1:
 				if (counter==0) {
 					die1.setValue(6);

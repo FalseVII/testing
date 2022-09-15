@@ -18,7 +18,7 @@ public class Player {
 	}
 
 	public void setTotalScore(int score) {
-		totalScore += score;
+		this.totalScore += score;
 	}
 	
 	@Override
