@@ -15,39 +15,44 @@ Rounds start at two.\
 Die rolls can hit a 0; should be 1-6.\
 Repeats Dice 1 twice for player one.
 
-Application does not exit on completion.(?)
-
+![img.png](img.png)
 
 <h3>Unit Tests:</h3>
 
-Unit testing is intended to ensure that the\
-code written works as intended before it is\
-integrated with other units\
-Verifies that all the code written can be\
-executed\
-Usually supported by a test framework\
-(jUnit in this case)\
-Can use test driven approach\
-Usually performed by the developer
+Using the bottom up implementation testing method, \
+the unit tests for classes deemed outside by the UML were written first\
+classes that did not communicate with other classes were tested to ensure\
+that the class was working as intended.
 
+Once the smallest "units of software" were tested, then came\
+the integration tests.
 
 <h3>Integration tests:</h3>
 
-Integration is building something from\
-smaller units of software\
-Purpose of integration testing is to expose\
-defects in the interfaces and in the\
-interactions between components\
-An integration strategy is required:\
-    - Bottom up\
-    Sometimes necessary to replace\
-    components with a stub ( a passive skeletal\
-    implementation of a component)
+Integration tests are implemented to classes that use other classes\
+to ensure that the classes are working together as intended.\
+This was done using the UML Diagram to determine which classes\
+communicated with each other.
+
+![img_1.png](img_1.png)
+
+For example, unit tests were written for the Die class\
+and integration tests were written for PairOfDice class\
+since the PairOfDice class uses the Die class.
+
+Since everything combined inside the Game class, the Game class\
+was tested last with a stub to manipulate the values inside it for all\
+three possible outcomes of the application.
+
+The coverage report shows that all classes are tested\
+and all methods are tested.
+
+![img_2.png](img_2.png)
 
 <h3>Manual Tests:</h3>
 
-Manual testing is the process of manually executing a\
-test case to verify that the software works as expected.\
-Manual testing is the most basic form of testing.
+Once unit tests and integration tests were written, the manual tests\
+were used, created from real world scenarios (user stories), to ensure that the\
+program was working as intended.
 
 

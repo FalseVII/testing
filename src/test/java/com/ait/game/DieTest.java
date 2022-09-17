@@ -21,6 +21,8 @@ class DieTest {
         assertThat(die1,allOf(greaterThanOrEqualTo(1),lessThanOrEqualTo(6)));   //Maybe if we over-engineer it, it will work
         assertThat(die2,allOf(greaterThanOrEqualTo(1),lessThanOrEqualTo(6)));
     }
+
+
     /*
     A cleaner implementation but does not follow the brief.
 
