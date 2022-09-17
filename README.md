@@ -7,13 +7,14 @@
 
 
 Bugs found so far:
-
-Double print goodbye if player one wins.\
-Does not check player one hitting an exact 20 for draw, counts it as a draw if over 20.\
-Does not roll dice for player two, reuses values from roll one.\
-Rounds start at two.\
-Die rolls can hit a 0; should be 1-6.\
-Repeats Dice 1 twice for player one.
+<ul>
+<li>Double print goodbye if player one wins.</li>
+<li>Does not check player one hitting an exact 20 for draw, counts it as a draw if over 20.</li>
+<li>Does not roll dice for player two, reuses values from roll one.</li>
+<li>Rounds start at two.</li>
+<li>Die rolls can hit a 0; should be 1-6.</li>
+<li>Repeats Dice 1 twice String for player one.</li>
+</ul>
 
 ![img.png](img.png)
 
@@ -56,5 +57,45 @@ and all methods are tested.
 Once unit tests and integration tests were written, the manual tests\
 were used, created from real world scenarios (user stories), to ensure that the\
 program was working as intended.
+
+    Test 01
+    **Scenario**: Player one wins
+    **Given**: The application is running
+    **When**: I enter player one name "Vlad"
+    **And**: I enter player two name "John"
+    **And**: I enter "y" in response to "roll the dice"
+    **And**: I enter player one rolls over "20"
+    **And**: I enter player two roll under "19"
+    **Then**: Player one wins
+
+    Test 02
+    **Scenario**: Player two wins
+    **Given**: The application is running
+    **When**: I enter player one name "Vlad"
+    **And**: I enter player two name "John"
+    **And**: I enter "y" in response to "roll the dice"
+    **And**: I enter player one rolls under "19"
+    **And**: I enter player two roll over "20"
+    **Then**: Player two wins
+
+
+    Test 03
+    **Scenario**: Draw
+    **Given**: The application is running
+    **When**: I enter player one name "Vlad"
+    **And**: I enter player two name "John"
+    **And**: I enter "y" in response to "roll the dice"
+    **And**: I enter player one rolls over "20"
+    **And**: I enter player two roll over "20"
+    **Then**: Draw
+
+    Test 04
+    **Scenario**: Not rolling dice.
+    **Given**: The application is running
+    **When**: I enter player one name "Vlad"
+    **And**: I enter player two name "John"
+    **And**: I enter "n" in response to "roll the dice"
+    **Then**: "Goodbye" is printed
+
 
 
