@@ -24,6 +24,8 @@ the unit tests for classes deemed outside by the UML were written first\
 classes that did not communicate with other classes were tested to ensure\
 that the class was working as intended.
 
+![img_3.png](img_3.png)
+
 Once the smallest "units of software" were tested, then came\
 the integration tests.
 
