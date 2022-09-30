@@ -9,9 +9,14 @@ class InvestmentTest {
     @ParameterizedTest
     @CsvFileSource(resources = "/dataInv.csv")
     void calcualteInvestmentValue(int invest, int years, double expected) {
-        Investment investment = new Investment();
-        double actual = investment.calcualteInvestmentValue(years, invest);
-        Assertions.assertEquals(expected, actual);
+            double actual = Investment.calcualteInvestmentValue(years, invest);
+            Assertions.assertEquals(expected, actual);
     }
-
+    @ParameterizedTest
+    @CsvFileSource(resources = "/limits.csv")
+    void limitsTest(int invest, int years) {
+            Assertions.assertThrows(IllegalArgumentException.class, () -> {
+                Investment.calcualteInvestmentValue(years, invest);
+            });
+    }
 }
