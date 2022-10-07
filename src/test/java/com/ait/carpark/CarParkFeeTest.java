@@ -29,6 +29,13 @@ class CarParkFeeTest {
         );
     }
 
+    static Stream<Arguments> hoursBoundsOutOfRange(){
+        return Stream.of(
+                Arguments.of(4,new int[] {3,3,3,3}),
+                Arguments.of(6,new int[] {3,3,3,3,3,3})
+        );
+    }
+
     static Stream<Arguments> hoursInRange(){
         return Stream.of(
                 Arguments.of(10,new int[] {5,5,5,2,2}),
@@ -64,6 +71,13 @@ class CarParkFeeTest {
     void testHoursOutOfRangeValues(int outOfRange) {
         Throwable exception=assertThrows(IllegalArgumentException.class,()->{car.calculateDailyFee(outOfRange);});
         assertEquals("Invalid number of hours " + outOfRange + " received",exception.getMessage());
+    }
+
+    @ParameterizedTest(name="Length of hours out of Range = {0} expecting IllegalArgumentException")
+    @MethodSource("hoursBoundsOutOfRange")
+    void testBoundsOutOfRange(int outOfRange,int[] hours) {
+        Throwable exception=assertThrows(IllegalArgumentException.class,()->{car.calculateWeeklyFee(hours);});
+        assertEquals("Invalid number of days " + hours.length + " received",exception.getMessage());
     }
 
 }
