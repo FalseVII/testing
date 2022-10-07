@@ -38,11 +38,11 @@ class CarParkFeeTest {
 
     static Stream<Arguments> hoursInRange(){
         return Stream.of(
-                Arguments.of(10,new int[] {5,5,5,2,2}),
-                Arguments.of(10,new int[] {5,5,5,3,2}),
-                Arguments.of(20,new int[] {5,5,5,5,1}),
-                Arguments.of(20,new int[] {10,10,10,10,10}),
-                Arguments.of(30,new int[] {20,20,20,20,20})
+                Arguments.of(10,new int[] {5,5,5,2,2}),//19
+                Arguments.of(10,new int[] {5,5,5,3,2}),//20
+                Arguments.of(20,new int[] {5,5,5,5,1}),//21
+                Arguments.of(20,new int[] {10,10,10,10,10}),//50
+                Arguments.of(30,new int[] {20,20,20,20,20}) //100
         );
     }
 
